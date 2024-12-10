@@ -1,0 +1,19 @@
+body {
+    font-family: 'Niramit';
+    font-weight: 200;
+}
+
+.itext {
+    border: 2px solid brown;
+    accent-color: red;
+}
+
+.ctext:hover{
+    background-color:blanchedalmond;
+    
+}
+
+.itext:hover{
+    background-color:blanchedalmond;
+    accent-color: green;
+}

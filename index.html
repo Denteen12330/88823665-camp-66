@@ -2,78 +2,92 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="mystyle.css">
     <title>Page Title</title>
     <meta charset="UTF-8" />
 </head>
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+</style>
+
+<style>
+    body {
+        background-color: linen;
+    }
+</style>
+
+
 <body>
-    <h1>Workshop #HTML - FORM</h1>
+
+    <h1 style="color:burlywood;">Workshop #HTML - FORM</h1>
+
     <table>
         <tr>
             <td>
-                <label for="username">ชื่อ</label>
+                <label class="ctext" for="username">ชื่อ</label>
             </td>
             <td>
-                <input type="text" id="fname" name="fname"><br>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="lastname">สกุล</label>
-            </td>
-            <td>
-                <input type="text" id="lastname" name="lastname"><br>
+                <input class="itext" type="text" id="fname" name="fname"><br>
             </td>
         </tr>
         <tr>
             <td>
-                <label for="birthday">วัน/เดือน/ปีเกิด</label>
+                <label class="ctext" for="lastname">สกุล</label>
             </td>
             <td>
-                <input type="date" id="birthday" name="birthday"><br>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="age">อายุ</label>
-            </td>
-            <td>
-                <input type="text" id="age" name="age"><br>
+                <input class="itext" type="text" id="lname" name="lname" ><br>
             </td>
         </tr>
         <tr>
             <td>
-                <label for="sex">เพศ</label>
+                <label class="ctext" for="birthday">วัน/เดือน/ปีเกิด</label>
             </td>
             <td>
-                <input type="radio" id="men" name="sex" value="men">
-                <label for="men">ชาย</label>
-                <input type="radio" id="women" name="sex" value="women">
-                <label for="women">หญิง</label>
+                <input class="itext" type="date" id="bday" name="bday"><br>
             </td>
         </tr>
         <tr>
             <td>
-                <label for="picture">รูป</label>
+                <label class="ctext" for="age">อายุ</label>
             </td>
             <td>
-                <input type="file" id="picture" name="picture">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="address">ที่อยู่</label>
-            </td>
-            <td>
-                <textarea rows="4" cols="30"></textarea>
+                <input class="itext" type="text" id="year" name="year"><br>
             </td>
         </tr>
         <tr>
             <td>
-                <label for="fav_Color">สีที่ชอบ</label>
+                <label class="ctext" for="sex">เพศ</label>
             </td>
             <td>
-                <select id="fav_Color" name="fav_Color" size="1">
+                <input class="itext" type="radio" id="men" name="sex" value="men">
+                <label class="ctext" for="men">ชาย</label>
+                <input class="itext" type="radio" id="women" name="sex" value="women">
+                <label class="ctext" for="women">หญิง</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="ctext" for="picture">รูป</label>
+            </td>
+            <td>
+                <input type="file" id="fpicture" name="fpicture">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="ctext" for="address">ที่อยู่</label>
+            </td>
+            <td>
+                <textarea class="itext" rows="4" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="ctext" for="fav_Color">สีที่ชอบ</label>
+            </td>
+            <td>
+                <select class="itext" id="fColor" name="fColor" size="1">
                     <option value="red">สีแดง</option>
                     <option value="orange">สีส้ม</option>
                     <option value="yellow">สีเหลือง</option>
@@ -82,20 +96,20 @@
         </tr>
         <tr>
             <td>
-                <label for="fav_music">แนวเพลงที่ชอบ</label>
+                <label class="ctext" class="ctext" for="fav_music">แนวเพลงที่ชอบ</label>
             </td>
             <td>
-                <input type="radio" id="forLife" name="fav_music" value="forLife">
-                <label for="men">เพื่อชีวิต</label>
-                <input type="radio" id="grassBaby" name="fav_music" value="grassBaby">
-                <label for="women">ลูกทุ่ง</label>
-                <input type="radio" id="orther" name="fav_music" value="orther">
-                <label for="women">อื่นๆ</label><br><br>
+                <input class="itext" type="radio" id="forLife" name="fav_music" value="forLife">
+                <label class="ctext" for="men">เพื่อชีวิต</label>
+                <input class="itext" type="radio" id="grassBaby" name="fav_music" value="grassBaby">
+                <label class="ctext" for="women">ลูกทุ่ง</label>
+                <input class="itext" type="radio" id="orther" name="fav_music" value="orther">
+                <label class="ctext" for="women">อื่นๆ</label><br><br>
             </td>
         <tr>
             <td>
-                <input type="checkbox" id="agree" name="agree" value="ok">
-                <label for="agree">ยินยอมให้เก็บข้อมูล</label><br><br>
+                <input class="itext" type="checkbox" id="agree" name="agree" value="ok">
+                <label class="ctext" for="agree">ยินยอมให้เก็บข้อมูล</label><br><br>
             </td>
         </tr>
         <tr>
@@ -104,7 +118,7 @@
             </td>
             <td>
                 <button type="submit">Submit</button>
-            </td> 
+            </td>
         </tr>
     </table>
 </body>
