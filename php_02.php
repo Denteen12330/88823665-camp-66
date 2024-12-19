@@ -7,14 +7,14 @@
     <body>
     <div class="container mt-5">
         <?php
-        $myvar = 2;
+        $myvar = "";
         ?>
-    <h1>สูตรคูณแม่ <?php echo $myvar; ?></h1>
+    <h1>ตัวเลข 1 - 100 ว่าเป็นเลขคู่ หรือ เลขคี่ <?php echo $myvar; ?></h1>
     <?php
-    for($i=1; $i <= 12; $i++) {
+    for($i=1; $i <= 100; $i++) {
         ?>
         <div class = "row">
-            <div class = "h2 col text-end"> 2 x <?php echo $i ?> = </div>
+            <div class = "h2 col text-end"> <?php echo $i ?> = </div>
             <div class = "h2 col text-start"> <?php echo 2*$i?></div>
     </div>
     <?php
