@@ -11,15 +11,15 @@
         ?>
     <h1>ตัวเลข 1 - 100 ว่าเป็นเลขคู่ หรือ เลขคี่ <?php echo $myvar; ?></h1>
     <?php
-    for($i=1; $i <= 100; $i++) {
-        ?>
-        <div class = "row">
-            <div class = "h2 col text-end"> <?php echo $i ?> = </div>
-            <div class = "h2 col text-start"> <?php echo 2*$i?></div>
-    </div>
-    <?php
-    }
-    ?>
+    for ($i = 0; $i < 101; $i++) {
+                echo "<p><span class='fw-bold'>" . $i . "</span> is <span class='fw-bold text-decoration-underline'>";
+                if ($i % 2 == 0) {
+                    echo " Even</p></span>";
+                } else {
+                    echo " Odd</p></span>";
+                }
+            }
+            ?>
     </div>
 </body>
 
