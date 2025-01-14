@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.default');
 });
+
+Route::get('/form', [MyController::class,'func']);
 
 Route::get('/hello', function () {
     return "<h1>Hello World</h1>";
@@ -16,3 +18,5 @@ Route::get("/mycontroller/{id?}",
 
 Route::post("/mycontroller/{id?}", 
     [MyController::class,'myfunction']);
+
+Route::POST("/form", [MyController::class,'assign']);

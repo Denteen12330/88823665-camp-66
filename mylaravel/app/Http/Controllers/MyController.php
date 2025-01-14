@@ -12,5 +12,12 @@ class MyController extends Controller
         $data['myinput'] = $req->input('myinput');
         return view('myview', $data);
     }
-
+    function assign(Request $req)
+    {
+        $number = $req->input('typeNumber');
+        return view('Laravelform',compact('number'));
+    }
+    function func(){
+        return view('Laravelform');
+    }
 }
