@@ -88,15 +88,6 @@ function mulTable(int $temp): void
         ?>
     </div>
     <!-- footer -->
-    <div class="card col rounded-5 mt-5 shadow text-center p-5" style="background-color: #292e39">
-        <div class="col">
-            <h6 class="text-white"> Crafted with 💖 by Patyot S.
-                <span class="text-wrap text-black fw-lighter rounded-5 ps-2 pe-2 pb"
-                      style="background-color: aquamarine">(66160109)</span>
-            </h6>
-            <a class="bi bi-github h1 text-white mt-3" href="https://github.com/1acto/88823665-camp-66/tree/PHP"></a>
-        </div>
-    </div>
 </div>
 </body>
 </html>
