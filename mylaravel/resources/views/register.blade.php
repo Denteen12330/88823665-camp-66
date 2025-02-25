@@ -1,4 +1,4 @@
-@extends('layouts.blank')
+@extends('layouts.default')
 @section('title')
     CAMP-66 | Register
 @endsection
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" name="password" id="password" oninput="return clickme3();"
+                            <input type="password" name="password" id="password" oninput="return clickpass();"
                                 class="form-control" placeholder="Password" />
                             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                             <div class="valid-feedback">
@@ -80,49 +80,52 @@
 
 
 @section('scripts')
-<script>
-    // Generic validation function
-    function validateField(selector, pattern = null) {
-        const field = $(selector);
-        const value = field.val().trim();
-        field.removeClass('is-invalid is-valid');
+    <script>
+        // Generic validation function
+        function validateField(selector, pattern = null) {
+            const field = $(selector);
+            const value = field.val().trim();
+            field.removeClass('is-invalid is-valid');
 
-        if (value === '') {
-            field.addClass('is-invalid');
-            return false;
+            if (value === '') {
+                field.addClass('is-invalid');
+                return false;
+            }
+
+            if (pattern && !pattern.test(value)) {
+                field.addClass('is-invalid');
+                return false;
+            }
+
+            field.addClass('is-valid');
+            return true;
         }
 
-        if (pattern && !pattern.test(value)) {
-            field.addClass('is-invalid');
-            return false;
+        // Field specific validations
+        function checkname() {
+            return validateField('#name');
         }
 
-        field.addClass('is-valid');
-        return true;
-    }
-
-    // Field specific validations
-    function checkname() {
-        return validateField('#name');
-    }
-
-    function checkemail() {
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
-        return validateField('#email', emailPattern);
-    }
-
-    function clickme3() {
-        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-        return validateField('#password', passwordPattern);
-    }
-
-    function checkValue() {
-        const checkbox = document.getElementById("flexCheckDefault");
-        if (!checkbox.checked) {
-            alert("🚨 Please check the checkbox");
-            return false;
+        function checkemail() {
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+            return validateField('#email', emailPattern);
         }
-        return true;
-    }
-</script>
+
+        function clickpass() {
+            const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            return validateField('#password', passwordPattern);
+        }
+
+        function checkValue() {
+            const checkbox = document.getElementById("flexCheckDefault");
+            if (!checkbox.checked) {
+                Swal.fire({
+                    icon: "{{}}",
+                    title: "Please agree to the terms",
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
 @endsection

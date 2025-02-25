@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
+    //function __construct()
+    //{
+    //    $user = session()->get('user');
+    //    if(!isset($user)){
+    //        redirect('/login')->send();
+    //    }
+    //}
     function index()
     {
         return view('dashboard');
